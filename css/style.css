@@ -63,7 +63,7 @@ margin: 20px auto; /* Center the button horizontally */
     width: 100%;
     box-sizing: border-box;
     border-radius: 4px;
-    border: 1px solid #ccc;
+    border: 1px solid #f2e9e9;
 }
 
 
@@ -607,6 +607,25 @@ button.fancybox-button.fancybox-button--share {
     font-size: 21px !important;
 }
 
+@media (max-width: 768px) {
+    .d-mob-none {
+      display: block;
+    }
+    .d-flex {
+      display: block;
+    }
+    .d-flex div {
+      margin-bottom: 20px; /* Add some space between images */
+    }
+  }
+
+  /* Optional: Flex layout for larger screens */
+  @media (min-width: 769px) {
+    .d-flex {
+      display: flex;
+      justify-content: center;
+    }
+  }
 
 @media screen and (max-width: 767px) {
     .banner-circle::after {
@@ -713,7 +732,7 @@ button.fancybox-button.fancybox-button--share {
     }
 
     .d-mob-none {
-        display: none !important;
+        display: none ;
     }
 
     .rounded-half {
@@ -1368,3 +1387,29 @@ button.fancybox-button.fancybox-button--share {
 .accordion-button:not(.collapsed)::after {
     background-image: url('../img/up-arrow.svg') !important;
 } */
+@media (max-width: 768px) {
+    iframe {
+      width: 100%;
+      height: 300px; /* Adjust the height for smaller screens */
+    }
+  }
+
+  /* For larger screens, maintain the original dimensions */
+  @media (min-width: 769px) {
+    iframe {
+      width: 100%;
+      height: 450px;
+    }
+  }
+  @media (max-width: 768px) {
+    .col-6 {
+      flex: 0 0 50%;
+    }
+  }
+
+  /* For desktop and larger devices, show three icons per row */
+  @media (min-width: 769px) {
+    .col-lg-4 {
+      flex: 0 0 33.33%;
+    }
+  }
